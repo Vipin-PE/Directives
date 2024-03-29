@@ -1,0 +1,20 @@
+<div>
+  <button (click)="toggleTable()">Show Table</button>
+  <table *ngIf="showTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th [ngStyle]="{'color': columnColors[column]}" *ngFor="let column of columns">
+          {{ column }}
+          <button class="btn btn-sm btn-secondary ml-2" (click)="changeColor(column)">Change color</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Column 1 Box</td>
+        <td>Column 2 Box</td>
+        <td>Column 3 Box</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
